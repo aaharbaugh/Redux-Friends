@@ -6,9 +6,9 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger'
 import thunk from 'redux-thunk';
-import reducer from './reducer';
+import rootReducer from './reducer/rootReducer';
 
-const store = createStore(reducer, applyMiddleware(thunk, logger));
+const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
 const rootElement = document.getElementById('root')
 
